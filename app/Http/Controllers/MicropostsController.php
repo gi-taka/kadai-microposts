@@ -31,7 +31,7 @@ class MicropostsController extends Controller
             'content' => $request->content,
         ]);
 
-        return redirect('/');
+        return back();
     }
     public function destroy($id)
     {
@@ -41,6 +41,6 @@ class MicropostsController extends Controller
             $micropost->delete();
         }
 
-        return redirect('/');
+        return back();
     }
 }
